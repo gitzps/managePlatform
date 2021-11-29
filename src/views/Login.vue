@@ -1,6 +1,7 @@
 <template>
   <div class="page-login">
     <div class="login-content">
+      <div class="login-title">智慧社区管理工作台</div>
       <el-form
         :model="ruleForm"
         :rules="rules"
@@ -90,16 +91,27 @@ export default {
   display: flex;
   height: 100%;
   width: 100%;
-  background: #80b3ff;
   position: relative;
+  background: url("./../assets/bg.png") no-repeat;
+  background-size: 100% 100%;
+  background-origin: content-box;
 
   .login-content {
     position: absolute;
-    padding: 20px;
-    right: 20%;
+    padding: 50px;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     background: #fff;
+    border-radius: 4px;
+
+    .login-title {
+      color: #08457e;
+      font-size: 35px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 35px;
+    }
   }
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="page-wraper">
     <page-header></page-header>
     <div class="page-wraper--body">
-      <left-menu></left-menu>
+      <left-menu :menuList="menuList"></left-menu>
       <div class="page-wraper--body_right">
         <div class="page-wraper-maincontent"><page-content></page-content></div>
         <copyright></copyright>
@@ -16,14 +16,28 @@ import pageHeader from "./header";
 import pageContent from "./content";
 import leftMenu from "./leftMenu";
 import copyright from "./copyright";
+import { mapState, mapActions  } from 'vuex'
 export default {
   name: "layout",
   components: { pageHeader, pageContent, leftMenu, copyright },
-  props: {},
+  props: { },
   data() {
     return {};
   },
-  methods: {},
+  computed: {
+    ...mapState({
+      menuList: 'menuList'
+    })
+  },
+  created() {
+    this.getMenus({menus:[]});
+  },
+  mounted() {},
+  methods: {
+    ...mapActions({
+      getMenus: 'initMenu' // 获取系统菜单信息
+    })
+  },
 };
 </script>
 

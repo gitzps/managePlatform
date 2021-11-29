@@ -17,7 +17,7 @@ export default {
 <style lang="less" scoped>
 .page-header {
   height: 60px;
-  background: #545c64;
+  background: #007dc8;
   display: flex;
 
   .page-header--left {

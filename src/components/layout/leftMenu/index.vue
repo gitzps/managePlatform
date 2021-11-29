@@ -1,28 +1,28 @@
 <template>
   <el-menu
     class="manage-menu-vertical"
-    background-color="#545c64"
+    background-color="#014889"
     text-color="#fff"
-    active-text-color="#ffd04b"
+    active-text-color="#017bca"
     :default-active="menuActive"
     :collapse="isCollapse"
     @open="handleOpen"
     @close="handleClose"
     @select="menuHander"
   >
-    <!-- <menu-item
+    <menu-item
       v-for="item of menuList"
       :key="item.path"
       :itemMenu="item"
-    ></menu-item> -->
+    ></menu-item>
   </el-menu>
 </template>
 
 <script>
-// import menuItem from "./menuItem/index.vue";
+import menuItem from "./menuItem/index.vue";
 export default {
   name: "leftMenu",
-  //   components: { menuItem },
+  components: { menuItem },
   props: {
     menuList: Array,
   },
