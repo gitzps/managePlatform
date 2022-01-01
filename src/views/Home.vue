@@ -1,5 +1,5 @@
 <template>
-  <layout :menuList="menuList"></layout>
+  <layout></layout>
 </template>
 
 <script>

@@ -8,13 +8,13 @@
       {{ itemMenu.menuName }}
     </template>
     <menu-item
-      v-for="item of itemMenu.children"
-      :key="item.path"
+      v-for="(item,index) of itemMenu.children"
+      :key="index"
       :itemMenu="item"
     >
     </menu-item>
   </el-submenu>
-  <el-menu-item v-else>{{ itemMenu.menuName }}</el-menu-item>
+  <el-menu-item v-else :index="itemMenu.path">{{ itemMenu.menuName }}</el-menu-item>
 </template>
 
 <script>

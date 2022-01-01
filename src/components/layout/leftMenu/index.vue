@@ -11,8 +11,8 @@
     @select="menuHander"
   >
     <menu-item
-      v-for="item of menuList"
-      :key="item.path"
+      v-for="(item, index) of menuList"
+      :key="index"
       :itemMenu="item"
     ></menu-item>
   </el-menu>
@@ -40,6 +40,7 @@ export default {
       console.log(key, keyPath);
     },
     menuHander(key, keyPath) {
+      console.log(key, 4444444444);
       this.$router.push(key);
     },
   },
@@ -48,7 +49,7 @@ export default {
 
 <style lang="less" scoped>
 .manage-menu-vertical:not(.el-menu--collapse) {
-  width: 250px;
+  width: 200px;
 }
 </style>
 >

@@ -54,7 +54,7 @@ export default {
 
     .page-wraper--body_right {
       height: 100%;
-      width: calc(100% - 250px);
+      width: calc(100% - 200px);
       display: flex;
       flex-direction: column;
 

@@ -71,7 +71,7 @@ export default new Vuex.Store({
             },
             {
               menuName: "通行记录",
-              path: "parkRecord",
+              path: "accessRecord",
               id: "1-1",
               children: [],
             },
